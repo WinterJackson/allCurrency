@@ -1,0 +1,12 @@
+.container {
+    display: block;
+    margin: 0 auto;
+    max-width: 975px;
+    background-color: #F4F4F4;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
