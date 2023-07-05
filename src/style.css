@@ -212,3 +212,49 @@ h1:hover {
 .spacer {
     height: 1500px;
 }
+
+#currency-converter {
+    padding: 35px;
+}
+
+.form-card {
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-column {
+    padding: 20px;
+}
+
+.form-column label,
+.form-column input,
+.form-column select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+  /* Optional: Adjust label styles for better alignment */
+.form-card label {
+    font-weight: bold;
+}
+
+  /* Optional: Adjust input and select styles for better visual appeal */
+.form-card input[type="number"],
+.form-card select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#convert-from {
+    width: 45%;
+    float: left;
+}
+
+#convert-to {
+    width: 45%;
+    float: right;
+}

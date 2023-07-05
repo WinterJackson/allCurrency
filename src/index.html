@@ -1,74 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>allCurrency</title>
-    <link rel="stylesheet" href="./style.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>allCurrency</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
 
-    <div class="container">
-        <div class="header" id="header">
-            <div class="header-left" id="header-left"> </div>
-            <div class="site-header" id="site-header">
-                <div class="logo-div" id="logo-div">
-                    <img id="logo" src="./allCurrency.pics/allCurrencybclear.png" alt="Logo">
-                </div>
-                <div class="menu-div" id="menu-div">
-                    <nav id="menu" class="menu">
-                        <ul class="menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a>
-                                <ul class="menu">
-                                    <li><a href="#">Service 1</a></li>
-                                    <li><a href="#">Service 2</a></li>
-                                    <li><a href="#">Service 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>  
-            </div>
-            <div class="header-right" id="header-right"></div>
+  <div class="container">
+    <div class="header" id="header">
+      <div class="header-left" id="header-left"></div>
+      <div class="site-header" id="site-header">
+        <div class="logo-div" id="logo-div">
+          <img id="logo" src="./allCurrency.pics/allCurrencybclear.png" alt="Logo">
         </div>
-        <div class="background-div" id="backgound-div1"></div>
-        <div class="content" id="content">
-            <div class="content" id="left-sidebar"></div>
-            <div class="content" id="main-content">
-                <h1 class="h1">allCurrency</h1>
-                <h2 class="h2"></h2>
-                <p class="text" id="intro">This is a tool that will help you convert the value of one currency into another currency. It allows you to determine the equivalent amount of money in a different currency based on the current exchange rates.
-
-                    The importance behind a currency converter lies in its ability to facilitate international trade, travel, and financial transactions. As different countries have their own currencies, a currency converter allows individuals and businesses to easily calculate and compare the value of money in different currencies.
-                    
-                    Currency converters rely on up-to-date exchange rates, which represent the relative values of different currencies at a given point in time. These exchange rates fluctuate based on various factors such as economic conditions, interest rates, political stability, and market demand.
-                </p>
-                <div class="form" id="currency-converter">
-                    <h2>Currency Converter</h2>
-                    <form>
-                        <label for="convert-from">Convert From:</label>
-                        <input type="number" id="convert-from" placeholder="Enter amount" required>
-                        <select id="from-currency">
-                            <!-- Options will be dynamically added -->
-                        </select>
-                        <span id="from-currency-fullname"></span>
-
-                        <label for="convert-to">Convert To:</label>
-                        <input type="number" id="convert-to" placeholder="Converted value" readonly>
-                        <select id="to-currency">
-                            <!-- Options will be dynamically added -->
-                        </select>
-                        <span id="to-currency-fullname"></span>
-                    </form>
-                    <div class="spacer"></div>
-                </div>
-            </div>
-            <div class="content" id="right-sidebar"></div> 
+        <div class="menu-div" id="menu-div">
+          <nav id="menu" class="menu">
+            <ul class="menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a>
+                <ul class="menu">
+                  <li><a href="#">Service 1</a></li>
+                  <li><a href="#">Service 2</a></li>
+                  <li><a href="#">Service 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
         </div>
+      </div>
+      <div class="header-right" id="header-right"></div>
     </div>
-    <script src="./currencyFinder.js"></script>
+    <div class="background-div" id="backgound-div1"></div>
+    <div class="content" id="content">
+      <div class="content" id="left-sidebar"></div>
+      <div class="content" id="main-content">
+        <h1 class="h1">allCurrency</h1>
+        <h2 class="h2"></h2>
+        <p class="text" id="intro">This is a tool that will help you convert the value of one currency into another currency. It allows you to determine the equivalent amount of money in a different currency based on the current exchange rates.
+
+          The importance behind a currency converter lies in its ability to facilitate international trade, travel, and financial transactions. As different countries have their own currencies, a currency converter allows individuals and businesses to easily calculate and compare the value of money in different currencies.
+
+          Currency converters rely on up-to-date exchange rates, which represent the relative values of different currencies at a given point in time. These exchange rates fluctuate based on various factors such as economic conditions, interest rates, political stability, and market demand.
+        </p>
+        <div class="form" id="currency-converter">
+          <h2>Currency Converter</h2>
+          <div class="form-card" id="convert-from">
+            <div class="form-column">
+              <label for="convert-from-input">Convert From:</label>
+              <input type="number" id="convert-from-input" placeholder="Enter amount" required>
+              <select id="from-currency">
+                <!-- Options will be dynamically added -->
+              </select>
+              <span id="from-currency-fullname"></span>
+            </div>
+          </div>
+          <div class="form-card" id="convert-to">
+            <div class="form-column">
+              <label for="convert-to-input">Convert To:</label>
+              <input type="number" id="convert-to-input" placeholder="Converted value" readonly>
+              <select id="to-currency">
+                <!-- Options will be dynamically added -->
+              </select>
+              <span id="to-currency-fullname"></span>
+            </div>
+          </div>
+          <div class="spacer"></div>
+        </div>
+      </div>
+      <div class="content" id="right-sidebar"></div>
+    </div>
+  </div>
+  <script src="./currencyFinder.js"></script>
 </body>
+
 </html>
