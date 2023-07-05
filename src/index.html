@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>allCurrency</title>
-    <link rel="stylesheet" href="./src/style.css"> 
+    <link rel="stylesheet" href="./style.css"> 
 </head>
 <body>
 
     <div class="container">
         <div class="header" id="header">
-            <div class="header-left" id="header-left"></div>
+            <div class="header-left" id="header-left"> </div>
             <div class="site-header" id="site-header">
                 <div class="logo-div" id="logo-div">
-                    <img id="logo" src="./src/allCurrency.pics/allCurrencybclear.png" alt="Logo">
+                    <img id="logo" src="./allCurrency.pics/allCurrencybclear.png" alt="Logo">
                 </div>
                 <div class="menu-div" id="menu-div">
                     <nav id="menu" class="menu">
@@ -46,15 +46,29 @@
                     
                     Currency converters rely on up-to-date exchange rates, which represent the relative values of different currencies at a given point in time. These exchange rates fluctuate based on various factors such as economic conditions, interest rates, political stability, and market demand.
                 </p>
-                <div class="form" id="exchange-rate-form">
-                    <form action="">
+                <div class="form" id="currency-converter">
+                    <h2>Currency Converter</h2>
+                    <form>
+                        <label for="convert-from">Convert From:</label>
+                        <input type="number" id="convert-from" placeholder="Enter amount" required>
+                        <select id="from-currency">
+                            <!-- Options will be dynamically added -->
+                        </select>
+                        <span id="from-currency-fullname"></span>
 
+                        <label for="convert-to">Convert To:</label>
+                        <input type="number" id="convert-to" placeholder="Converted value" readonly>
+                        <select id="to-currency">
+                            <!-- Options will be dynamically added -->
+                        </select>
+                        <span id="to-currency-fullname"></span>
                     </form>
+                    <div class="spacer"></div>
                 </div>
             </div>
             <div class="content" id="right-sidebar"></div> 
         </div>
     </div>
-
+    <script src="./currencyFinder.js"></script>
 </body>
 </html>
