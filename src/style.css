@@ -1,12 +1,210 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    }
+
+html {
+    font-size: 16px; 
+    }
+
 .container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     margin: 0 auto;
-    max-width: 975px;
+    width: 100%;
     background-color: #F4F4F4;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 100px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 0.75em; 
+    padding-bottom: 266.25em;
+    border-radius: 0.625em; 
+    box-shadow: 0 0 0.625em #00000051; 
+    position: relative;
+    z-index: 1;
+
 }
+
+#header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./allCurrency.pics/coins3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9; 
+    background-attachment: fixed; 
+    width: 100%; 
+    z-index: 2; 
+}
+
+#logo {
+    margin-top: -0.625em;
+    margin-bottom: 0.625em;
+    max-width: 60%; 
+    height: auto; 
+    z-index: 99;
+    display: block;
+}
+
+/* Apply specific styles for smaller screen sizes */
+@media (max-width: 768px) {
+    #logo {
+        max-width: 60%; /* Reduce the logo's maximum width to 50% for screens up to 768px */
+    }
+}
+
+/* Apply specific styles for even smaller screen sizes */
+@media (max-width: 480px) {
+    #logo {
+        max-width: 60%; /* Further reduce the logo's maximum width to 30% for screens up to 480px */
+    }
+}
+
+#site-header { 
+    width: 60%;
+    margin: 0 auto;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 1.25em 0.2em; 
+    margin-top: -5.25em;
+    margin-bottom: 2.25em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+        html {
+            font-size: 14px;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        html {
+            font-size: 12px;
+        }
+    }
+
+ul.menu li {
+    margin-right: 0.625em;
+    position: relative;
+    padding-left: 0.625em;
+}
+
+ul.menu li:last-child {
+    margin-right: 0;
+}
+
+ul.menu li a {
+    text-decoration: none;
+    color: #FBC132;
+}
+
+ul.menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    background-color: #cc1c1c;
+    min-width: 9.375em; 
+}
+
+ul.menu li:hover > ul {
+    display: block;
+    margin-top: 0.625em; 
+    margin-left: -2.1875em;
+}
+
+ul.menu ul li {
+    margin-right: 0;
+    padding: 0.625em; 
+}
+
+#header-left {
+    width: 20%;
+    float:left;
+}
+
+#header-right {
+    width: 20%;
+    float:right;
+    display: none;
+}
+
+#logo-div {
+    width: 50%;
+    padding-top: 0.625em;
+    padding-bottom: 1em;
+}
+
+#menu-div {
+    width: 50%;
+    padding-left: 50%;
+}
+    
+.header {
+    height: 80vh;
+}
+    
+#left-sidebar {
+    width: 20%;
+    float: left;
+    height: 100%;
+}
+
+#main-content {
+    width: 60%;
+    margin: 0 auto;
+    height: 100%;
+    float: left;
+    background-image: linear-gradient(rgba(255, 255, 255, 1.95), rgba(0, 0, 0, 0.75)), url(./allCurrency.pics/coins2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#right-sidebar {
+    width: 20%;
+    float: right;
+    height: 100%;
+}
+
+.content {
+    height: 100%;
+}
+
+.h1 {
+    padding-left: 0.825em;
+    padding-right: 0.825em;
+    color: #000000;
+    text-decoration: none;
+    font-size: 2.8125em;
+}
+
+h1:hover {
+    text-decoration: overline;
+    text-decoration-color: #FBC132;
+}
+
+.h2 {
+    padding-left: 0.825em;
+    padding-right: 0.825em;
+}
+
+.text {
+    padding-left: 1.825em;
+    padding-right: 1.825em;
+}
+
+#content {
+    height: 100vh;
+    background-image: url(./allCurrency.pics/coins2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+    
