@@ -61,6 +61,7 @@ html {
 #site-header { 
     width: 60%;
     margin: 0 auto;
+    height: 50vh;
 }
 
 ul.menu {
@@ -99,6 +100,7 @@ ul.menu li:last-child {
 ul.menu li a {
     text-decoration: none;
     color: #FBC132;
+    white-space: nowrap;
 }
 
 ul.menu ul {
@@ -107,14 +109,14 @@ ul.menu ul {
     top: 100%;
     left: 0;
     padding: 0;
-    background-color: #cc1c1c;
     min-width: 9.375em; 
+    width: 100%;
 }
 
 ul.menu li:hover > ul {
-    display: block;
+    display: flex;
     margin-top: 0.625em; 
-    margin-left: -2.1875em;
+    margin-left: 1.25em;
 }
 
 ul.menu ul li {
@@ -145,7 +147,8 @@ ul.menu ul li {
 }
     
 .header {
-    height: 80vh;
+    height: 100vh;
+    position: relative;
 }
     
 #left-sidebar {
@@ -214,18 +217,18 @@ h1:hover {
 }
 
 #currency-converter {
-    padding: 35px;
+    padding: 2.1875em;
 }
 
 .form-card {
     background-color: #f2f2f2;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    border-radius: 0.5em;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.25em;
 }
 
 .form-column {
-    padding: 20px;
+    padding: 1.25em;
 }
 
 .form-column label,
@@ -233,20 +236,18 @@ h1:hover {
 .form-column select {
     display: block;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
 }
 
-  /* Optional: Adjust label styles for better alignment */
 .form-card label {
     font-weight: bold;
 }
 
-  /* Optional: Adjust input and select styles for better visual appeal */
 .form-card input[type="number"],
 .form-card select {
-    padding: 8px;
+    padding: 0.5em;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0.25em;
 }
 
 #convert-from {
@@ -257,4 +258,20 @@ h1:hover {
 #convert-to {
     width: 45%;
     float: right;
+}
+
+.menu {
+    width: 100%;
+}
+
+.exchange-rates-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.exchange-rates-table th,
+.exchange-rates-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
 }

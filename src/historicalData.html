@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currency Converter</title>
+</head>
+<body>
+  <h1>Historical Currency Converter</h1>
+  <form id="exchangeForm" onsubmit="fetchExchangeRates(event)">
+    <label for="baseCurrency">Base Currency:</label>
+    <select id="baseCurrency" name="baseCurrency" required>
+      <option value="" disabled selected>Select a currency</option>
+    </select>
+    <br><br>
+    <span id="currency-fullname"></span>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+    <br><br>
+    <input type="submit" id="submitBtn" value="Submit">
+  </form>
+
+  <div id="result"></div>
+
+  <script src="./historicalData.js"></script>
+</body>
+</html>
