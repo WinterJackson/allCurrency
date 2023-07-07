@@ -1,6 +1,8 @@
 
 html, body {
     margin: 0;
+    height: 100%;
+    padding: 0;
     }
 
 html {
@@ -11,6 +13,7 @@ html {
     display: flex;
     flex-direction: column;
     height: 100%;
+    min-height: 100vh;
     margin: 0 auto;
     width: 100%;
     background-color: #F4F4F4;
@@ -18,8 +21,8 @@ html {
     box-shadow: 0 0 0.625em #00000051; 
     position: relative;
     z-index: 1;
-
 }
+
 
 #header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./src/allCurrency.pics/coins3.jpg');
@@ -40,9 +43,8 @@ html {
     opacity: 0.9; 
     background-attachment: fixed; 
     width: 100%; 
-    z-index: 2; 
+    z-index: 1; 
 }
-
 
 #header-all {
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./src/allCurrency.pics/coins3.jpg');
@@ -204,7 +206,7 @@ ul.menu ul li {
 }
     
 .header {
-    height: 45vh;
+    height: 20vh;
     position: relative;
 }
     
@@ -214,7 +216,7 @@ ul.menu ul li {
 }
 
 .footer {
-    height: 45vh;
+    height: 30vh;
     position: relative;
 }
 
@@ -224,7 +226,13 @@ ul.menu ul li {
     height: 100%;
 }
 
-#main-content {
+.sidebar-left {
+    width: 20%;
+    float: left;
+    height: 100%;
+}
+
+#main-current-rates {
     width: 60%;
     margin: 0 auto;
     height: 100%;
@@ -234,6 +242,32 @@ ul.menu ul li {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    position: relative;
+    overflow: auto; 
+    padding-bottom: 0px; 
+    margin-bottom: -100px;
+  }
+
+#main-current-rates::-webkit-scrollbar {
+    width: 1px;
+}
+
+#sidebar-right {
+    width: 20%;
+    float: right;
+    height: 100%;
+  }
+
+#main-content {
+    width: 60%;
+    margin: 0 auto;
+    height: 100%;
+    float: left;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: 500px;
 }
 
 #right-sidebar {
@@ -281,6 +315,11 @@ h2:hover {
     background-position: center;
     background-size: 100%;
     background-attachment: fixed;
+    position: relative;
+    overflow: auto; 
+    padding-bottom: 100px; 
+    margin-bottom: 0px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(0, 0, 0, 0.75)), url(./src/allCurrency.pics/coins2.jpg);
 }
 
 #currency-converter {
@@ -455,7 +494,79 @@ h2:hover {
   text-decoration: none; 
 }
 
-.content {
-    padding-bottom: 200px;
-    height: 100%;
-}
+#currency-search {
+    width: 40%;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.41);
+    margin-top: 40px;
+  }
+  
+  .currency-search h4 {
+    text-align: left;
+    margin-top: 0;
+  }
+  
+  .currency-search input[type="text"] {
+    width: 70%;
+    padding: 8px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .currency-search button {
+    width: 30%;
+    padding: 8px;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .currency-search span {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  #major-pairs {
+    width: 90%;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.41);
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  #major-pairs {
+    width: 40%;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.41);
+    margin-top: 40px;
+  }
+  
+  #major-pairs h1 {
+    text-align: left;
+    margin-top: 0;
+  }
+  
+  .major-pairs-table-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .major-pairs-table-container table {
+    flex-basis: 48%;
+  }
+  
+  .major-pairs-table-container table th,
+  .major-pairs-table-container table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  

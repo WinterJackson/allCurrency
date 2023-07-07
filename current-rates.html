@@ -4,24 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exchange Rates</title>
+  <link rel="stylesheet" href="./style.css">
   <script src="./src/headerAll.js"></script>
 </head>
 <body>
   <div id="header-placeholder"></div>
-  <div>Currency Search Tool
-    <input type="text" id="currencyInput" placeholder="Enter currency initials">
-    <button id="searchButton"><img src="./src/allCurrency.pics/search-icon.png" alt="Search"></button>
-    <span id="fullName"></span>
+  
+  <div class="container">
+    <div class="content" id="content">
+        <div class="sidebar-left" id="sidebar-left"></div>
+  
+        <div class="main-current-rates" id="main-current-rates">
+        <!-- Main Content -->
+          <div class="currency-search" id="currency-search">
+            <h4>Currency Search Tool</h4>
+            <input type="text" id="currencyInput" placeholder="Enter currency initials">
+            <button id="searchButton"><img src="./src/allCurrency.pics/search-icon.png" alt="Search"></button>
+            <span id="fullName"></span>
+          </div>
+            <div class="major-pairs" id="major-pairs">
+                <h1>Major Pairs</h1>
+                <div class="major-pairs-table-container" id="majorPairsTable"></div>
+            </div>
+            <div class="euro-pairs" id="euro-pairs">
+                <h1>Euro Pairs</h1>
+                <div id="euroPairsTable"></div>
+            </div>
+            <div class="usd-pairs" id="usd-pairs">
+                <h1>USD Pairs</h1>
+                <div id="usdPairsTable"></div>
+            </div>
+        </div>
+  
+        <div class="sidebar-right" id="sidebar-right"></div>
+    </div>
   </div>
-  
-  <h1>Major Pairs</h1>
-  <div id="majorPairsTable"></div>
-  
-  <h1>Euro Pairs</h1>
-  <div id="euroPairsTable"></div>
-  
-  <h1>USD Pairs</h1>
-  <div id="usdPairsTable"></div>
 
   <div id="footer-placeholder"></div>
   <script src="./src/majorPairs.js"></script>
