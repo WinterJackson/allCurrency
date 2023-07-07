@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Historical Data</title>
+    <script src="./src/headerAll.js"></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+        <h1>Historical Data</h1>
+        <div id="historicalTool">
+            <h2>Exchange Rate Comparison Tool</h2>
+            <form id="historical-tool" onsubmit="fetchExchangeRate(event)">
+                <label for="base-currency">Base Currency:</label>
+                <select id="base-currency" name="base-currency" required>
+                <option value="" disabled selected>Select a currency</option>
+                </select>
+                <span id="base-fullname"></span>
+                <br><br>
+                <label for="target-currency">Target Currency:</label>
+                <select id="target-currency" name="target-currency" required>
+                <option value="" disabled selected>Select a currency</option>
+                </select>
+                <span id="target-fullname"></span>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <br><br>
+                <input type="submit" id="submit-btn" value="Submit">
+            </form>
+        </div>
+        <div id="resultRate"></div>
+        <div>
+            <h1>Historical Currency Converter</h1>
+            <form id="exchangeForm" onsubmit="fetchExchangeRates(event)">
+                <label for="baseCurrency">Base Currency:</label>
+                <select id="baseCurrency" name="baseCurrency" required>
+                <option value="" disabled selected>Select a currency</option>
+                </select>
+                <br><br>
+                <span id="currency-fullname"></span>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <br><br>
+                <input type="submit" id="submitBtn" value="Submit">
+                </form>
+                <div id="resultTable"></div>
+        </div>
+<div id="footer-placeholder"></div>
+<script src="./src/historicalData.js"></script>
+<script src="./src/historicalExRate.js"></script>
+<script src="./src/footer.js"></script>
+</body>
+</html>

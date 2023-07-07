@@ -40,7 +40,7 @@ function fetchExchangeRates(event) {
 }
 
 function displayExchangeRates() {
-  const resultDiv = document.getElementById("result");
+  const resultDiv = document.getElementById("resultTable");
   resultDiv.innerHTML = '';
 
   const exchangeRates = Object.values(receivedData)[1];

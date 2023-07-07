@@ -1,11 +1,10 @@
 
 html, body {
-    height: 100%;
     margin: 0;
     }
 
 html {
-    font-size: 16px; 
+    font-size: 18px; 
     }
 
 .container {
@@ -15,8 +14,6 @@ html {
     margin: 0 auto;
     width: 100%;
     background-color: #F4F4F4;
-    padding: 0.75em; 
-    padding-bottom: 266.25em;
     border-radius: 0.625em; 
     box-shadow: 0 0 0.625em #00000051; 
     position: relative;
@@ -25,7 +22,30 @@ html {
 }
 
 #header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./allCurrency.pics/coins3.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./src/allCurrency.pics/coins3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9; 
+    background-attachment: fixed; 
+    width: 100%; 
+    z-index: 2; 
+}
+
+#footer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./src/allCurrency.pics/coins3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9; 
+    background-attachment: fixed; 
+    width: 100%; 
+    z-index: 2; 
+}
+
+
+#header-all {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('./src/allCurrency.pics/coins3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,17 +64,17 @@ html {
     display: block;
 }
 
-/* Apply specific styles for smaller screen sizes */
+ 
 @media (max-width: 768px) {
     #logo {
-        max-width: 60%; /* Reduce the logo's maximum width to 50% for screens up to 768px */
+        max-width: 60%; 
     }
 }
 
-/* Apply specific styles for even smaller screen sizes */
+
 @media (max-width: 480px) {
     #logo {
-        max-width: 60%; /* Further reduce the logo's maximum width to 30% for screens up to 480px */
+        max-width: 60%; 
     }
 }
 
@@ -62,6 +82,16 @@ html {
     width: 60%;
     margin: 0 auto;
     height: 50vh;
+}
+
+#site-footer { 
+    width: 60%;
+    margin: 0 auto;
+}
+
+#all-site-header { 
+    width: 60%;
+    margin: 0 auto;
 }
 
 ul.menu {
@@ -103,6 +133,11 @@ ul.menu li a {
     white-space: nowrap;
 }
 
+ul.menu li a:hover {
+    text-decoration: overline;
+    text-decoration-color: #FBC132;
+}
+
 ul.menu ul {
     display: none;
     position: absolute;
@@ -129,7 +164,29 @@ ul.menu ul li {
     float:left;
 }
 
+#header-all-left {
+    width: 20%;
+    float:left;
+}
+
+#footer-left {
+    width: 20%;
+    float:left;
+}
+
 #header-right {
+    width: 20%;
+    float:right;
+    display: none;
+}
+
+#footer-right {
+    width: 20%;
+    float:right;
+    display: none;
+}
+
+#header-all-right {
     width: 20%;
     float:right;
     display: none;
@@ -147,10 +204,20 @@ ul.menu ul li {
 }
     
 .header {
-    height: 100vh;
+    height: 45vh;
     position: relative;
 }
     
+.header-all{
+    height: 25vh;
+    position: relative;
+}
+
+.footer {
+    height: 45vh;
+    position: relative;
+}
+
 #left-sidebar {
     width: 20%;
     float: left;
@@ -162,7 +229,7 @@ ul.menu ul li {
     margin: 0 auto;
     height: 100%;
     float: left;
-    background-image: linear-gradient(rgba(255, 255, 255, 1.95), rgba(0, 0, 0, 0.75)), url(./allCurrency.pics/coins2.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 1.95), rgba(0, 0, 0, 0.75)), url(./src/allCurrency.pics/coins2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -192,6 +259,11 @@ h1:hover {
     text-decoration-color: #FBC132;
 }
 
+h2:hover {
+    text-decoration: overline;
+    text-decoration-color: #FBC132;
+}
+
 .h2 {
     padding-left: 0.825em;
     padding-right: 0.825em;
@@ -204,16 +276,11 @@ h1:hover {
 
 #content {
     height: 100vh;
-    background-image: url(./allCurrency.pics/coins2.jpg);
+    background-image: url(./src/allCurrency.pics/coins2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
     background-attachment: fixed;
-}
-    
-
-.spacer {
-    height: 1500px;
 }
 
 #currency-converter {
@@ -274,4 +341,121 @@ h1:hover {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
+}
+
+#searchButton img {
+    width: 25px; 
+    height: 25px;
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(300deg);
+    transition: filter 0.3s;
+}
+
+#searchButton:hover img {
+    filter: none;
+}
+
+#searchButton {
+    width: 40px; 
+    height: 40px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.42); 
+    padding: 0;
+    border-radius: 5px;
+}
+
+#searchButton:hover  {
+    background-color: #FBC132; 
+}
+
+#currencyInput {
+    border: 1px solid #ccc;
+    width: 80%; 
+    height: 40px;
+    border-radius: 5px; 
+}
+  
+.currency-tool {
+    width: 40%;
+    background-color: #f2f2f2;
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-left: 35px;
+    margin-top: 80px;
+}
+
+.currency-tool h3 {
+  margin-top: 0; 
+}
+
+.currency-tool input[type="text"],
+.currency-tool button {
+  display: inline-block;
+  margin-bottom: 15px; 
+}
+
+.currency-tool span {
+  display: block;
+}
+
+#home-text {
+    width: 45%;
+    float: right;
+    margin-top: -180px;
+    padding: 20px;
+    background-color: #fbc2322c;
+}
+
+#intro {
+    padding: 40px;
+    font-size: larger;
+    background-color: #fbc2322c;
+}
+
+.menu2 {
+    color: #FBC132;
+    list-style-type: none;
+    text-decoration: none;
+    float: right;
+}
+
+.menu2 li {
+    color: #FBC132;
+    list-style-type: none;
+}
+
+.menu3 {
+    color: #FBC132;
+    list-style-type: none;
+    text-decoration: none;
+    float: right;
+}
+
+.menu2 {
+  list-style: none;
+  margin-top: -125px;
+  margin-right: -25px;
+}
+
+.menu3 {
+    list-style: none;
+    margin-top: -125px;
+    margin-right: 40px;
+  }
+
+.menu2 li,
+.menu3 li {
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.menu2 a,
+.menu3 a {
+  color: white; 
+  text-decoration: none; 
+}
+
+.content {
+    padding-bottom: 200px;
+    height: 100%;
 }

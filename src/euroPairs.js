@@ -1,43 +1,47 @@
-function fetchMajorPairsExchangeRates() {
-    // List of the major currency pairs
-    const majorPairs = [
-      "EUR/USD",
-      "USD/EUR",
-      "GBP/USD",
-      "USD/GBP",
-      "USD/CAD",
-      "CAD/USD",
-      "USD/CHF",
-      "CHF/USD",
-      "USD/JPY",
-      "JPY/USD",
-      "EUR/GBP",
-      "GBP/EUR",
-      "EUR/CHF",
-      "CHF/EUR",
-      "AUD/USD",
-      "USD/AUD",
-      "EUR/JPY",
-      "JPY/EUR",
-      "GBP/JPY",
-      "JPY/GBP"
+function fetchEuroPairsExchangeRates() {
+    // List of the euro pairs
+    const euroPairs = [
+      "EUR/AUD",
+      "AUD/EUR",
+      "EUR/CZK",
+      "CZK/EUR",
+      "EUR/HUF",
+      "HUF/EUR",
+      "EUR/NZD",
+      "NZD/EUR",
+      "EUR/SEK",
+      "SEK/EUR",
+      "EUR/SGD",
+      "SGD/EUR",
+      "EUR/CAD",
+      "CAD/EUR",
+      "EUR/DKK",
+      "DKK/EUR",
+      "EUR/NOK",
+      "NOK/EUR",
+      "EUR/PLN",
+      "PLN/EUR",
+      "EUR/TRY",
+      "TRY/EUR",
+      "EUR/ZAR",
+      "ZAR/EUR"
     ];
   
     // container div for the tables
     const containerDiv = document.createElement("div");
     containerDiv.style.display = "flex";
   
-    // the first column table for major pairs
-    const table1 = createTable(majorPairs.slice(0, 10));
+    // the first column table
+    const table1 = createTable(euroPairs.slice(0, 12));
     containerDiv.appendChild(table1);
   
-    // the second column table for major pairs
-    const table2 = createTable(majorPairs.slice(10));
+    // the second column table
+    const table2 = createTable(euroPairs.slice(12));
     containerDiv.appendChild(table2);
   
-    // Append the container div to the majorPairsTable div
-    const majorPairsTableDiv = document.getElementById("majorPairsTable");
-    majorPairsTableDiv.appendChild(containerDiv);
+    // Append the container div to the euroPairsTable div
+    const euroPairsTableDiv = document.getElementById("euroPairsTable");
+    euroPairsTableDiv.appendChild(containerDiv);
   }
   
   function createTable(pairs) {
@@ -89,5 +93,6 @@ function fetchMajorPairsExchangeRates() {
     return table;
   }
   
-  fetchMajorPairsExchangeRates();
+
+  fetchEuroPairsExchangeRates();
   

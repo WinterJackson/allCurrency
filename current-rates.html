@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exchange Rates</title>
+  <script src="./src/headerAll.js"></script>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <div>Currency Search Tool
+    <input type="text" id="currencyInput" placeholder="Enter currency initials">
+    <button id="searchButton"><img src="./src/allCurrency.pics/search-icon.png" alt="Search"></button>
+    <span id="fullName"></span>
+  </div>
+  
+  <h1>Major Pairs</h1>
+  <div id="majorPairsTable"></div>
+  
+  <h1>Euro Pairs</h1>
+  <div id="euroPairsTable"></div>
+  
+  <h1>USD Pairs</h1>
+  <div id="usdPairsTable"></div>
+
+  <div id="footer-placeholder"></div>
+  <script src="./src/majorPairs.js"></script>
+  <script src="./src/euroPairs.js"></script>
+  <script src="./src/usdPairs.js"></script>
+  <script src="./src/currencySearch.js"></script>
+  <script src="./src/footer.js"></script>
+</body>
+</html>

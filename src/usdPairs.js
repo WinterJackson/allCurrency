@@ -1,43 +1,51 @@
-function fetchMajorPairsExchangeRates() {
-    // List of the major currency pairs
-    const majorPairs = [
-      "EUR/USD",
-      "USD/EUR",
-      "GBP/USD",
-      "USD/GBP",
-      "USD/CAD",
-      "CAD/USD",
-      "USD/CHF",
-      "CHF/USD",
-      "USD/JPY",
-      "JPY/USD",
-      "EUR/GBP",
-      "GBP/EUR",
-      "EUR/CHF",
-      "CHF/EUR",
-      "AUD/USD",
-      "USD/AUD",
-      "EUR/JPY",
-      "JPY/EUR",
-      "GBP/JPY",
-      "JPY/GBP"
+function fetchUsdPairsExchangeRates() {
+    // List of the USD pairs
+    const usdPairs = [
+      "USD/CNH",
+      "CNH/USD",
+      "USD/DKK",
+      "DKK/USD",
+      "USD/HUF",
+      "HUF/USD",
+      "USD/MXN",
+      "MXN/USD",
+      "USD/PLN",
+      "PLN/USD",
+      "USD/SEK",
+      "SEK/USD",
+      "USD/THB",
+      "THB/USD",
+      "USD/ZAR",
+      "ZAR/USD",
+      "USD/CZK",
+      "CZK/USD",
+      "USD/HKD",
+      "HKD/USD",
+      "USD/NOK",
+      "NOK/USD",
+      "USD/SAR",
+      "SAR/USD",
+      "USD/SGD",
+      "SGD/USD",
+      "USD/TRY",
+      "TRY/USD"
     ];
   
     // container div for the tables
     const containerDiv = document.createElement("div");
     containerDiv.style.display = "flex";
   
-    // the first column table for major pairs
-    const table1 = createTable(majorPairs.slice(0, 10));
+    // the first column table for USD pairs
+    const table1 = createTable(usdPairs.slice(0, 14));
     containerDiv.appendChild(table1);
   
-    // the second column table for major pairs
-    const table2 = createTable(majorPairs.slice(10));
+    // the second column table for USD pairs
+    const table2 = createTable(usdPairs.slice(14));
     containerDiv.appendChild(table2);
   
-    // Append the container div to the majorPairsTable div
-    const majorPairsTableDiv = document.getElementById("majorPairsTable");
-    majorPairsTableDiv.appendChild(containerDiv);
+    // Append the container div to the usdPairsTable div
+    const usdPairsTableDiv = document.getElementById("usdPairsTable");
+    usdPairsTableDiv.appendChild(containerDiv);
   }
   
   function createTable(pairs) {
@@ -89,5 +97,6 @@ function fetchMajorPairsExchangeRates() {
     return table;
   }
   
-  fetchMajorPairsExchangeRates();
+  
+  fetchUsdPairsExchangeRates();
   
