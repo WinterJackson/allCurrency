@@ -529,18 +529,7 @@ h2:hover {
     text-align: left;
   }
   
-  #major-pairs {
-    width: 90%;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.41);
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  
-  #major-pairs {
+  #major-pairs, #euro-pairs, #usd-pairs {
     width: 40%;
     border-radius: 10px;
     padding: 30px;
@@ -548,25 +537,117 @@ h2:hover {
     margin-top: 40px;
   }
   
-  #major-pairs h1 {
+  #major-pairs h1, #euro-pairs h1, #usd-pairs h1 {
     text-align: left;
     margin-top: 0;
   }
   
-  .major-pairs-table-container {
+  .major-pairs-table-container, .euro-pairs-table-container, .usd-pairs-table-container {
     display: flex;
     justify-content: space-between;
   }
   
-  .major-pairs-table-container table {
+  .major-pairs-table-container table, .euro-pairs-table-container table, .usd-pairs-table-container table {
     flex-basis: 48%;
   }
   
   .major-pairs-table-container table th,
-  .major-pairs-table-container table td {
+  .major-pairs-table-container table td,
+  .euro-pairs-table-container table th,
+  .euro-pairs-table-container table td,
+  .usd-pairs-table-container table th,
+  .usd-pairs-table-container table td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ccc;
   }
   
+  #historicalTool {
+    width: 45%;
+    border-radius: 10px;
+  }
+  
+  #historicalTool h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  #historical-tool label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #historical-tool select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  #historical-tool input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  #historical-tool input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  #resultRate {
+    margin-top: 20px;
+  }
+  
+
+  .historical-currency {
+    width: 45%;
+    border-radius: 10px;
+  }
+  
+  .historical-currency h1 {
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .historical-currency label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .historical-currency select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .historical-currency input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .historical-currency input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  #resultTable {
+    margin-top: 20px;
+  }
   

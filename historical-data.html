@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Historical Data</title>
+    <link rel="stylesheet" href="./style.css">
     <script src="./src/headerAll.js"></script>
 </head>
 <body>
@@ -28,7 +29,7 @@
             </form>
         </div>
         <div id="resultRate"></div>
-        <div>
+        <div class="historical-currency" id="historical-currency">
             <h1>Historical Currency Converter</h1>
             <form id="exchangeForm" onsubmit="fetchExchangeRates(event)">
                 <label for="baseCurrency">Base Currency:</label>
