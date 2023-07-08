@@ -1,29 +1,41 @@
 function fetchExchangeRate(event) {
-    event.preventDefault();
-  
-    const baseCurrency = document.getElementById('base-currency').value;
-    const targetCurrency = document.getElementById('target-currency').value;
-    const date = document.getElementById('date').value;
-  
-    const apiUrl = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/${date}/currencies/${baseCurrency.toLowerCase()}.json`;
-  
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        const exchangeRates = Object.values(data)[1]; // Using Object.values() to get an array of all the exchange rates
-  
-        if (exchangeRates && exchangeRates[targetCurrency]) {
-          const exchangeRate = exchangeRates[targetCurrency];
-          document.getElementById('resultRate').innerHTML = `Exchange Rate of ${baseCurrency.toUpperCase()} against ${targetCurrency.toUpperCase()}: ${exchangeRate}`;
-        } else {
-          document.getElementById('resultRate').innerHTML = 'Exchange rate not found for the selected currencies and date.';
-        }
-      })
-      .catch(error => {
-        document.getElementById('resultRate').innerHTML = 'Error fetching exchange rate data.';
-        console.log(error);
-      });
-  }
+  event.preventDefault();
+
+  const baseCurrency = document.getElementById('base-currency').value;
+  const targetCurrency = document.getElementById('target-currency').value;
+  const date = document.getElementById('date').value;
+
+  const apiUrl = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/${date}/currencies/${baseCurrency.toLowerCase()}.json`;
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      const exchangeRates = Object.values(data)[1];
+
+      if (exchangeRates && exchangeRates[targetCurrency]) {
+        const exchangeRate = exchangeRates[targetCurrency];
+        const resultRateDiv = document.getElementById('resultRate');
+        resultRateDiv.innerHTML = `Exchange Rate (<strong>${baseCurrency.toUpperCase()}</strong> / <strong>${targetCurrency.toUpperCase()}</strong>) = <span class="exchange-rate">${exchangeRate}</span>`;
+        resultRateDiv.classList.add('slide-in');
+
+        // Slide out and hide after 20 seconds
+        setTimeout(function() {
+          resultRateDiv.classList.remove('slide-in');
+          resultRateDiv.classList.add('slide-out');
+          setTimeout(function() {
+            resultRateDiv.style.display = 'none';
+            resultRateDiv.classList.remove('slide-out');
+          }, 1000);
+        }, 90000);
+      } else {
+        document.getElementById('resultRate').innerHTML = 'Exchange rate not found for the selected currencies and date.';
+      }
+    })
+    .catch(error => {
+      document.getElementById('resultRate').innerHTML = 'Error fetching exchange rate data.';
+      console.log(error);
+    });
+}
   
   // Populate currency dropdowns with available currencies
   function populateCurrencies() {

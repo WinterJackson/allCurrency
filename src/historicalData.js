@@ -23,7 +23,7 @@ function fetchExchangeRates(event) {
   event.preventDefault();
 
   const baseCurrency = document.getElementById("baseCurrency").value.toLowerCase();
-  const date = document.getElementById("date").value;
+  const date = document.getElementById("date2").value;
   const endpoint = `currencies/${baseCurrency}.json`;
 
   const apiUrl = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/${date}/${endpoint}`;
@@ -52,12 +52,20 @@ function displayExchangeRates() {
   fetch("https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies.json")
     .then(response => response.json())
     .then(data => {
+      const baseCurrencyFullName = document.getElementById("currency-fullname").textContent;
+      const captionText = `The information below represents the exchange rates of ${baseCurrencyFullName} against the top 20 strongest currencies in the world.`;
+
       // Create a table element
       const table = document.createElement("table");
       table.classList.add("exchange-rates-table");
 
+      // Create table caption
+      const caption = document.createElement("caption");
+      caption.textContent = captionText;
+      table.appendChild(caption);
+
       // Create table header
-      const headerRow = table.insertRow();
+      const headerRow = document.createElement("tr");
       const headerCell1 = document.createElement("th");
       headerCell1.textContent = "Currency";
       const headerCell2 = document.createElement("th");
@@ -67,6 +75,7 @@ function displayExchangeRates() {
       headerRow.appendChild(headerCell1);
       headerRow.appendChild(headerCell2);
       headerRow.appendChild(headerCell3);
+      table.appendChild(headerRow);
 
       // Populate table rows with data
       for (let i = 0; i < currencies.length; i++) {
@@ -74,13 +83,16 @@ function displayExchangeRates() {
         const exchangeRate = exchangeRates[currency];
         const currencyFullName = data[currency].toUpperCase();
 
-        const row = table.insertRow();
-        const cell1 = row.insertCell();
+        const row = document.createElement("tr");
+        const cell1 = document.createElement("td");
         cell1.textContent = currency.toUpperCase();
-        const cell2 = row.insertCell();
+        const cell2 = document.createElement("td");
         cell2.textContent = currencyFullName;
-        const cell3 = row.insertCell();
+        const cell3 = document.createElement("td");
         cell3.textContent = exchangeRate;
+        row.appendChild(cell1);
+        row.appendChild(cell2);
+        row.appendChild(cell3);
 
         // Append each row to the table
         table.appendChild(row);

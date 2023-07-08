@@ -7,47 +7,57 @@
 </head>
 <body>
     <div id="header-placeholder"></div>
-        <h1>Historical Data</h1>
-        <div id="historicalTool">
-            <h2>Exchange Rate Comparison Tool</h2>
-            <form id="historical-tool" onsubmit="fetchExchangeRate(event)">
-                <label for="base-currency">Base Currency:</label>
-                <select id="base-currency" name="base-currency" required>
-                <option value="" disabled selected>Select a currency</option>
-                </select>
-                <span id="base-fullname"></span>
-                <br><br>
-                <label for="target-currency">Target Currency:</label>
-                <select id="target-currency" name="target-currency" required>
-                <option value="" disabled selected>Select a currency</option>
-                </select>
-                <span id="target-fullname"></span>
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date" required>
-                <br><br>
-                <input type="submit" id="submit-btn" value="Submit">
-            </form>
-        </div>
-        <div id="resultRate"></div>
-        <div class="historical-currency" id="historical-currency">
-            <h1>Historical Currency Converter</h1>
-            <form id="exchangeForm" onsubmit="fetchExchangeRates(event)">
-                <label for="baseCurrency">Base Currency:</label>
-                <select id="baseCurrency" name="baseCurrency" required>
-                <option value="" disabled selected>Select a currency</option>
-                </select>
-                <br><br>
-                <span id="currency-fullname"></span>
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date" required>
-                <br><br>
-                <input type="submit" id="submitBtn" value="Submit">
+    <div class="content" id="content-historical-data">
+        <div class="sidebar-left" id="sidebar-left"></div>
+        <div class="main" id="main">
+            <div class="topic" id="topic">
+                <h1>Historical Data</h1>
+            </div>
+            <div class="hsitorical-tool" id="historicalTool">
+                <h2>Exchange Rate Comparison Tool</h2>
+                <form id="historical-tool" onsubmit="fetchExchangeRate(event)">
+                    <label for="base-currency">Base Currency:</label>
+                    <select id="base-currency" name="base-currency" required>
+                        <option value="" disabled selected>Select a currency</option>
+                    </select>
+                    <span id="base-fullname"></span>
+                    <br><br>
+                    <label for="target-currency">Target Currency:</label>
+                    <select id="target-currency" name="target-currency" required>
+                        <option value="" disabled selected>Select a currency</option>
+                    </select>
+                    <span id="target-fullname"></span>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    <br><br>
+                    <input type="submit" class="submit-button" id="submit-btn" value="Submit" style="background-color: white;" onmouseover="this.style.backgroundColor='#FBC132'" onmouseout="this.style.backgroundColor='white'">
+                </form>
+            </div>
+            <div id="resultRate"></div>
+            <div class="historical-currency" id="historical-currency">
+                <div class="topic" id="topic2">
+                    <h1>Historical Currency Converter</h1>
+                </div>
+                <form id="exchangeForm" onsubmit="fetchExchangeRates(event)">
+                    <label for="baseCurrency">Base Currency:</label>
+                    <select id="baseCurrency" name="baseCurrency" required>
+                        <option value="" disabled selected>Select a currency</option>
+                    </select>
+                    <br><br>
+                    <span id="currency-fullname"></span>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date2" name="date" required>
+                    <br><br>
+                    <input type="submit" id="submitBtn" value="Submit" style="background-color: white;" onmouseover="this.style.backgroundColor='#FBC132'" onmouseout="this.style.backgroundColor='white'">
                 </form>
                 <div id="resultTable"></div>
+            </div>
         </div>
-<div id="footer-placeholder"></div>
-<script src="./src/historicalData.js"></script>
-<script src="./src/historicalExRate.js"></script>
-<script src="./src/footer.js"></script>
+        <div class="sidebar-right" id="sidebar-right"></div>
+    </div>
+    <div id="footer-placeholder"></div>
+    <script src="./src/historicalData.js"></script>
+    <script src="./src/historicalExRate.js"></script>
+    <script src="./src/footer.js"></script>
 </body>
 </html>

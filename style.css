@@ -1,7 +1,6 @@
 
 html, body {
     margin: 0;
-    height: 100%;
     padding: 0;
     }
 
@@ -12,7 +11,6 @@ html {
 .container {
     display: flex;
     flex-direction: column;
-    height: 100%;
     min-height: 100vh;
     margin: 0 auto;
     width: 100%;
@@ -21,6 +19,7 @@ html {
     box-shadow: 0 0 0.625em #00000051; 
     position: relative;
     z-index: 1;
+    padding-bottom: 30vh;
 }
 
 
@@ -44,6 +43,7 @@ html {
     background-attachment: fixed; 
     width: 100%; 
     z-index: 1; 
+    bottom: 0;
 }
 
 #header-all {
@@ -223,19 +223,17 @@ ul.menu ul li {
 #left-sidebar {
     width: 20%;
     float: left;
-    height: 100%;
 }
 
 .sidebar-left {
     width: 20%;
     float: left;
-    height: 100%;
+    background-color: aqua;
 }
 
 #main-current-rates {
     width: 60%;
     margin: 0 auto;
-    height: 100%;
     float: left;
     background-image: linear-gradient(rgba(255, 255, 255, 1.95), rgba(0, 0, 0, 0.75)), url(./src/allCurrency.pics/coins2.jpg);
     background-size: cover;
@@ -255,29 +253,31 @@ ul.menu ul li {
 #sidebar-right {
     width: 20%;
     float: right;
-    height: 100%;
+    background-color: #c11d1d;
   }
 
 #main-content {
     width: 60%;
     margin: 0 auto;
-    height: 100%;
     float: left;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    margin-bottom: 500px;
+    overflow: auto;
 }
 
 #right-sidebar {
     width: 20%;
     float: right;
-    height: 100%;
 }
 
 .content {
-    height: 100%;
+    display: flex;
+}
+
+.main {
+    width: 60%;
 }
 
 .h1 {
@@ -562,18 +562,32 @@ h2:hover {
     border-bottom: 1px solid #ccc;
   }
   
-  #historicalTool {
-    width: 45%;
+.topic {
+    padding-left: 35px;
+}
+
+#topic2 {
+    padding-top: 40px;
+}
+
+#historicalTool {
+    display: grid;
+    width: 35%;
+    padding: 35px;
     border-radius: 10px;
-  }
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.41);
+    background-color: #fbc2322c;
+    margin-left: 35px;
+}
   
   #historicalTool h2 {
-    text-align: center;
+    display: flex;
+    text-align: left;
     margin-top: 0;
   }
   
   #historical-tool label {
-    display: block;
+    display: flex;
     margin-bottom: 10px;
   }
   
@@ -586,7 +600,7 @@ h2:hover {
   }
   
   #historical-tool input[type="date"] {
-    width: 100%;
+    width:50%;
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -602,14 +616,52 @@ h2:hover {
     cursor: pointer;
   }
   
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  .slide-in {
+    animation: slideIn 2s forwards;
+  }
+  
+  .slide-out {
+    animation: slideOut 2s forwards;
+  }
+
+  .exchange-rate {
+    font-weight: bold;
+    font-size: 1em;
+    word-spacing: 0.5em;
+    white-space: pre-wrap;
+  }
+
   #resultRate {
-    margin-top: 20px;
+    display: flex;
+    float: right;
+    margin-top: -450px;
+    background-color: #fbc2322c;
+    padding: 40px;
+    border-radius: 10px 0px 0px 10px;
   }
   
 
   .historical-currency {
-    width: 45%;
     border-radius: 10px;
+    padding: 35px;
   }
   
   .historical-currency h1 {
@@ -631,7 +683,7 @@ h2:hover {
   }
   
   .historical-currency input[type="date"] {
-    width: 100%;
+    width: 40%;
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -639,7 +691,7 @@ h2:hover {
   }
   
   .historical-currency input[type="submit"] {
-    width: 100%;
+    width: 42%;
     padding: 8px;
     border-radius: 5px;
     border: none;
@@ -647,7 +699,53 @@ h2:hover {
     cursor: pointer;
   }
   
+  .historical-currency select {
+    width: 42%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
   #resultTable {
     margin-top: 20px;
+    display: flex;
+    overflow-x: auto; 
+    margin-top: 20px;
   }
+  
+  #exchangeForm {
+    display: grid;
+    width: 90%;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.41);
+    background-color: #fbc2322c;
+  }
+
+  .exchange-rates-table {
+    display: grid;
+    width: 90%;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.41);
+    background-color: #fbc2322c;
+    width: max-content;
+  }
+
+  .exchange-rates-table > * {
+    display: grid;
+    grid-template-columns: 1fr 50% 1fr;
+  }
+
+  .exchange-rates-table tbody {
+    display: flex;
+    width: 100%;
+  }
+
+  .exchange-rates-table caption {
+    display: flex;
+    padding: 20px;
+  }
+
   
