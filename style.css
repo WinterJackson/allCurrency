@@ -730,7 +730,6 @@ h2:hover {
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.41);
     background-color: #fbc2322c;
-    width: max-content;
   }
 
   .exchange-rates-table > * {
@@ -738,14 +737,19 @@ h2:hover {
     grid-template-columns: 1fr 50% 1fr;
   }
 
-  .exchange-rates-table tbody {
-    display: flex;
-    width: 100%;
-  }
-
   .exchange-rates-table caption {
     display: flex;
-    padding: 20px;
+    padding: 60px;
   }
 
-  
+  .exchange-rates-table th,
+.exchange-rates-table td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: left;
+}
+
+.exchange-rates-table th:nth-child(2),
+.exchange-rates-table td:nth-child(2) {
+  text-align: center;
+}
