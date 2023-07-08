@@ -42,10 +42,6 @@ function fetchExchangeRate(event) {
         });
 }
 
-// ... Rest of the code remains the same
-
-
-  
   // Populate currency dropdowns with available currencies
   function populateCurrencies() {
     const baseCurrencyDropdown = document.getElementById('base-currency');
