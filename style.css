@@ -596,14 +596,27 @@ h2:hover {
     border-bottom: 1px solid black;
   }
   
-.topic {
-    padding-left: 35px;
-    margin-top: 50px;
-    margin-bottom: 30px;
+#topic1 {
+    padding-top: 0.1em;
+    background-color: #fbc2322c;
+    padding-left: 2em;
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+    padding-bottom: 0.1em;
+    margin-right: 55%;
 }
 
 #topic2 {
-    padding-top: 40px;
+  background-color: #fbc2322c;
+  margin-left: 30%;
+  padding-top: 1em;
+  padding-bottom: 0.1em;
+  margin-bottom: 3em;
+  margin-right: -2em;
+}
+
+#historical-data {
+  margin-bottom: 2.5em;
 }
 
 #historicalTool {
@@ -669,26 +682,27 @@ h2:hover {
 
 .tool-info p {
     text-align: justify;
-    font-size: large ;
+    font-size: x-large ;
 }
 
 
 #section2 {
   display: grid;
   grid-template-columns: 50% 50%;
+  margin-bottom: 1em;
 }
 
 #tool-info2 {
   grid-column-start: 2;
   background-color: #fbc23281;
-  margin-top: -320px;
-  padding: 20px;
+  margin-top: -20em;
+  padding: 1em;
   margin-bottom: auto;
 }
 
 #tool-info2 p {
   text-align: justify;
-  font-size: large ;
+  font-size: x-large ;
 }
 
 .tool-info3 {
@@ -703,7 +717,7 @@ h2:hover {
 
 .info3-tool {
   text-align: justify;
-  font-size: large ;
+  font-size: x-large ;
   padding-right: 20px;
 }
 
@@ -743,7 +757,7 @@ h2:hover {
   #resultRate {
     display: flex;
     float: right;
-    margin-top: -450px;
+    margin-top: -30em;
     background-color: #fbc23281;
     padding: 40px;
     border-radius: 10px 0px 0px 10px;
@@ -841,15 +855,35 @@ h2:hover {
 }
 
 
-.emoji1 {
+.emoji {
   display: block;
 }
 
-.emoji1 img{
+#emoji1 img{
   width: 50px;
   height: auto;
-  margin-left: 750px;
+  margin-left: 65%;
   
+}
+
+#emoji2 img{ 
+  width: 50px;
+  height: auto;
+  margin-left: 40em;
+  position: relative;
+  top: -20.5em; 
+}
+
+@keyframes noddingAnimation2 {
+  0% {
+    transform: rotate(60deg);
+  }
+  50% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(60deg);
+  }
 }
 
 @keyframes noddingAnimation {
@@ -864,8 +898,12 @@ h2:hover {
   }
 }
 
-.emoji1 img {
+#emoji1 img {
   animation: noddingAnimation 2s infinite;
+}
+
+#emoji2 img {
+  animation: noddingAnimation2 2s infinite;
 }
 
 .main-current-rates {
