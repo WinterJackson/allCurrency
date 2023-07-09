@@ -385,6 +385,10 @@ h2:hover {
     font-weight: bold;
 }
 
+.form-card input[type="number"] {
+  width: 95%;
+}
+
 .form-card input[type="number"],
 .form-card select {
     padding: 0.5em;
@@ -749,6 +753,12 @@ h2:hover {
   margin-right: -2em;
 }
 
+.fullname-currency {
+  background-color: #fbc23281;
+  padding: 1em;
+  font-weight: bold;
+}
+
 #historical-data {
   margin-bottom: 2.5em;
 }
@@ -942,7 +952,7 @@ h2:hover {
     margin-top: 20px;
     display: flex;
     overflow-x: auto; 
-    margin-top: 20px;
+    margin-top: 5em;
   }
   
   #exchangeForm {
