@@ -14,26 +14,50 @@
     <div class="content" id="content">
         <div class="sidebar-left" id="sidebar-left"></div>
   
-        <div class="main" id="main-current-rates">
+        <div class="main" id="main">
         <!-- Main Content -->
+        <div class="main-current-rates" id="main-current-rates">
+          <div class="currency-search-tool" id="currency-search-tool">
           <div class="currency-search" id="currency-search">
             <h4>Currency Search Tool</h4>
             <input type="text" id="currencyInput" placeholder="Enter currency initials">
             <button id="searchButton"><img src="./src/allCurrency.pics/search-icon.png" alt="Search"></button>
+          </div>
+          <div class="currency-fullname" id="currency-fullname">
             <span id="fullName"></span>
           </div>
+          <div class="emoji1" id="emoji1">
+            <img src="./src/allCurrency.pics/emoji1.png" alt="emoji1">
+          </div>
+          <div class="tool-info3" id="tool-info3">
+            <div class="info3-tool" id="info3-tool">
+                <p><strong>Discover Currency Names with Ease!</strong></p>
+                <p>Looking for the full name of a currency but unsure about the initials you heard? We've got you covered! Simply enter the currency initials in the search box below, hit enter, and watch the magic unfold.</p>
+                <p>Our smart tool gives you the currency name in an instant, saving you time and effort.</p>
+                <p>Feel free to explore and find the currency names you need effortlessly!</p>
+                <p><strong>Note:</strong> Please ensure you have an active internet connection for the tool to work properly.</p>
+            </div>
+          </div>
+          </div>
             <div class="major-pairs" id="major-pairs">
-                <h1>Major Pairs</h1>
+                <div class="major-pairs-head" id="major-pairs-head">
+                  <h1>Major Pairs</h1>
+                </div>
                 <div class="major-pairs-table-container" id="majorPairsTable"></div>
             </div>
             <div class="euro-pairs" id="euro-pairs">
-                <h1>Euro Pairs</h1>
+                  <div class="euro-pairs-head" id="euro-pairs-head">
+                    <h1>Euro Pairs</h1>
+                  </div>
                 <div class="euro-pairs-table-container" id="euroPairsTable"></div>
             </div>
             <div class="usd-pairs" id="usd-pairs">
-                <h1>USD Pairs</h1>
+                <div class="usd-pairs-head" id="usd-pairs-head">
+                  <h1>USD Pairs</h1>
+                </div>
                 <div id="usdPairsTable"></div>
             </div>
+          </div>
         </div>
   
         <div class="sidebar-right" id="sidebar-right"></div>
