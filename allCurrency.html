@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +7,7 @@
   <link rel="stylesheet" href="./style.css">
   <script src="./src/highlighter.js"></script>
 </head>
-
 <body>
-
   <div class="container">
     <div class="header" id="header">
       <div class="header-left" id="header-left"></div>
@@ -18,7 +15,7 @@
         <div class="logo-div" id="logo-div">
           <a href="./allCurrency.html">
             <img id="logo" src="./src/allCurrency.pics/allCurrencybclear.png" alt="Logo">
-          </a>    
+          </a>
         </div>
         <div class="menu-div" id="menu-div">
           <nav id="menu" class="menu">
@@ -44,30 +41,30 @@
     <div class="content" id="content-home">
       <div class="sidebar-left" id="sidebar-left"></div>
       <div class="main" id="main">
-          <div class="main-name" id="main-name">
-            <h1 class="h1">allCurrency</h1>
-          </div>
-         <div class="text" id="intro">
-            <p>Welcome to <strong>allCurrency</strong>, the ultimate destination for accurate and efficient exchange rate tools. Our sophisticated currency converter enables seamless conversion between different currencies, providing you with the precise value of one currency in relation to another. With up-to-the-minute exchange rates, you can effortlessly determine the equivalent amount of money in a different currency, empowering you to navigate the complexities of international trade, travel, and financial transactions.</p>
+        <div class="main-name" id="main-name">
+          <h1 class="h1">allCurrency</h1>
+        </div>
+        <div class="text" id="intro">
+          <p>Welcome to <strong>allCurrency</strong>, the ultimate destination for accurate and efficient exchange rate tools. Our sophisticated currency converter enables seamless conversion between different currencies, providing you with the precise value of one currency in relation to another. With up-to-the-minute exchange rates, you can effortlessly determine the equivalent amount of money in a different currency, empowering you to navigate the complexities of international trade, travel, and financial transactions.</p>
         </div>
         <div class="currency-searcher" id="currency-searcher">
-        <div class="currency-tool" id="currency-tool">
+          <div class="currency-tool" id="currency-tool">
             <h3>Currency Search Tool</h3>
             <div class="tool-div1" id="tool-div1">
               <input type="text" id="currencyInput" placeholder="Enter currency initials">
               <button id="searchButton"><img src="./src/allCurrency.pics/search-icon.png" alt="Search"></button>
             </div>
-        </div>
-        <div class="emoji" id="emoji3">
-          <img src="./src/allCurrency.pics/emoji-inv.png" alt="pointing-emoji">
-        </div>
-        <div id="resultFullname" class="resultFullname">
-          <span id="fullName"></span>
-        </div>
-        <div class="text" id="home-text">
-          <p>In today's globalized world, where each country has its own currency, the importance of a currency converter cannot be overstated. <strong>allCurrency's</strong> converter simplifies the process of calculating and comparing the value of money across various currencies. By relying on real-time data, our converter ensures that you have access to the most accurate exchange rates available, capturing the nuances of economic conditions, interest rates, political stability, and market demand.</p>
-          <p>Whether you are planning a trip abroad, conducting international business, or seeking to stay informed about currency values, <strong>allCurrency</strong> is your trusted companion. Our comprehensive exchange rate tools empower you with precise insights and reliable information to make informed financial decisions in today's rapidly evolving global economy. Join us today and experience the convenience, accuracy, and efficiency of <strong>allCurrency</strong> as you effortlessly navigate the world of currencies and unlock new possibilities.</p>
-        </div> 
+          </div>
+          <div class="emoji" id="emoji3">
+            <img src="./src/allCurrency.pics/emoji-inv.png" alt="pointing-emoji">
+          </div>
+          <div id="resultFullname" class="resultFullname">
+            <span id="fullName"></span>
+          </div>
+          <div class="text" id="home-text">
+            <p>In today's globalized world, where each country has its own currency, the importance of a currency converter cannot be overstated. <strong>allCurrency's</strong> converter simplifies the process of calculating and comparing the value of money across various currencies. By relying on real-time data, our converter ensures that you have access to the most accurate exchange rates available, capturing the nuances of economic conditions, interest rates, political stability, and market demand.</p>
+            <p>Whether you are planning a trip abroad, conducting international business, or seeking to stay informed about currency values, <strong>allCurrency</strong> is your trusted companion. Our comprehensive exchange rate tools empower you with precise insights and reliable information to make informed financial decisions in today's rapidly evolving global economy. Join us today and experience the convenience, accuracy, and efficiency of <strong>allCurrency</strong> as you effortlessly navigate the world of currencies and unlock new possibilities.</p>
+          </div>
         </div>
         <div class="form" id="currency-converter">
           <h2>Currency Converter</h2>
@@ -75,31 +72,31 @@
             <p>Our currency converter tool is designed to simplify currency conversions with real-time exchange rates. Whether you're a traveler, international trader, or managing finances across borders, our accurate and reliable converter ensures effortless calculations. Stay ahead of global markets with our user-friendly tool that factors in economic indicators, interest rates, and market demands. Trust us for a seamless and convenient currency conversion experience.</p>
           </div>
           <div class="converter-div" id="converter-div">
-          <div class="form-card" id="convert-from">
-            <div class="form-column" id="form-column1">
-              <label for="convert-from-input">Convert From:</label>
-              <input type="number" id="convert-from-input" placeholder="Enter amount" required>
-              <select id="from-currency">
-                <!-- Options will be added from server-->
-              </select>
-              <div class="from-currency-name" id="from-currency-name">
-                <span id="from-currency-fullname"></span>
+            <div class="form-card" id="convert-from">
+              <div class="form-column" id="form-column1">
+                <label for="convert-from-input">Convert From:</label>
+                <input type="number" id="convert-from-input" placeholder="Enter amount" required>
+                <select id="from-currency">
+                  <!-- Options added from server -->
+                </select>
+                <div class="from-currency-name" id="from-currency-name">
+                  <span id="from-currency-fullname"></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-card" id="convert-to">
+              <div class="form-column" id="form-column2">
+                <label for="convert-to-input">Convert To:</label>
+                <input type="number" id="convert-to-input" placeholder="Converted value" readonly>
+                <select id="to-currency">
+                  <!-- Options added from server -->
+                </select>
+                <div class="to-currency-name" id="to-currency-name">
+                  <span id="to-currency-fullname"></span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="form-card" id="convert-to">
-            <div class="form-column" id="form-column2">
-              <label for="convert-to-input">Convert To:</label>
-              <input type="number" id="convert-to-input" placeholder="Converted value" readonly>
-              <select id="to-currency">
-                <!-- Options will be added from server-->
-              </select>
-              <div class="to-currency-name" id="to-currency-name">
-                <span id="to-currency-fullname"></span>
-              </div>
-            </div>
-          </div>
-        </div>
         </div>
       </div>
       <div class="sidebar-right" id="sidebar-right"></div>
@@ -110,5 +107,4 @@
   <script src="./src/currencyConverter.js"></script>
   <script src="./src/footer.js"></script>
 </body>
-
 </html>
